@@ -29,6 +29,10 @@ const CheckLog=()=>{
     setAuthority(window.localStorage.getItem("authorities"));
     return;
   }
+  else
+  {
+    setLogged(false);
+  }
 }
   useEffect(() => {
     CheckLog();
@@ -68,6 +72,7 @@ return (
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/" element={<LandingPage />} />
+          <Route path="/landingpage" element={<LandingPage />} />
         </>
       )}
     </Routes>
